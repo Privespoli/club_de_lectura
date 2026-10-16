@@ -31,6 +31,19 @@ catalogo = [
         },
     ]
 
+print(catalogo)
+
+def mostrar_catalogo(libros):
+  if not libros:
+    print("El catálogo está vacío.")
+    return
+
+  for libro in libros:
+    print(
+        f"• {libro['titulo']} — {libro['autor']} — {libro['genero']} —"
+        f" {libro['estado']}"
+    )
+
 def buscar_por_estado():
     estado_buscado = input(
         "Introduce el estado (pendiente, leyendo, terminado): "
