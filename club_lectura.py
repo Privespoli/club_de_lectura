@@ -81,6 +81,38 @@ def buscar_por_estado():
         print("No hay libros con ese estado.")
 buscar_por_estado()
 
+def anadir_libro():
+    """Añade un nuevo libro al catálogo."""
+
+    print("\n--- Funcionalidad 3: Añadir un libro ---")
+
+    titulo = input("Introduce el título del libro: ").strip()
+    autor = input("Introduce la autoría del libro: ").strip()
+    genero = input("Introduce el género del libro: ").strip()
+
+    # Comprobar que los campos no estén vacíos
+    if not titulo or not autor or not genero:
+        print("Error: todos los campos son obligatorios.")
+        return
+
+    # Crear el nuevo libro con estado pendiente
+    nuevo_libro = {
+        "titulo": titulo,
+        "autor": autor,
+        "genero": genero,
+        "estado": "pendiente"
+    }
+
+    # Añadir el libro al catálogo
+    catalogo.append(nuevo_libro)
+
+    print("\nLibro añadido correctamente.")
+    print("Título:", nuevo_libro["titulo"])
+    print("Autor:", nuevo_libro["autor"])
+    print("Género:", nuevo_libro["genero"])
+    print("Estado:", nuevo_libro["estado"])
+
+
 #Numero total de libros
 total_libros = len(catalogo)
 print(f"Total de libros en el catalogo: ¨[{total_libros}]")
