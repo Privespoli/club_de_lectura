@@ -31,4 +31,39 @@ catalogo = [
         },
     ]
 
-print(catalogo)
+def buscar_por_estado():
+    estado_buscado = input(
+        "Introduce el estado (pendiente, leyendo, terminado): "
+    ).strip().lower()
+
+    encontrados = 0
+
+    for libro in catalogo:
+        if libro["estado"] == estado_buscado:
+            print("\nTítulo:", libro["titulo"])
+            print("Autor:", libro["autor"])
+            print("Género:", libro["genero"])
+            print("Estado:", libro["estado"])
+            encontrados += 1
+
+    if encontrados == 0:
+        print("No hay libros con ese estado.")
+buscar_por_estado()
+def buscar_por_estado():
+    estado_buscado = input(
+        "Introduce el estado (pendiente, leyendo, terminado): "
+    ).strip().lower()
+
+    encontrados = 0
+
+    for libro in catalogo:
+        if libro["estado"] == estado_buscado:
+            print("\nTítulo:", libro["titulo"])
+            print("Autor:", libro["autor"])
+            print("Género:", libro["genero"])
+            print("Estado:", libro["estado"])
+            encontrados += 1
+
+    if encontrados == 0:
+        print("No hay libros con ese estado.")
+buscar_por_estado()
