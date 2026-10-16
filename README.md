@@ -6,7 +6,7 @@ Pequeño programa desarrollado en Python para gestionar el catálogo de libros d
 
 ## 👥 Equipo de Trabajo
 Este proyecto ha sido desarrollado en equipo por:
-* **Daneeka**
+* **Danesska**
 * **Priscila**
 * **Olga**
 * **Paulina**

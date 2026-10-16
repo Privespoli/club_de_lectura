@@ -80,3 +80,14 @@ def buscar_por_estado():
     if encontrados == 0:
         print("No hay libros con ese estado.")
 buscar_por_estado()
+
+#Numero total de libros
+total_libros = len(catalogo)
+print(f"Total de libros en el catalogo: ¨[{total_libros}]")
+#Status de lecturas
+pendientes = list(catalogo.values()).count("pendiente")
+terminados = list(catalogo.values()).count("terminado")
+leyendo = list(catalogo.values()).count("leyendo")
+print(f"Libros pendientes: {pendientes}")
+print(f"Libros terminados: {terminados}")
+print(f"Libros en lectura: {leyendo}")
